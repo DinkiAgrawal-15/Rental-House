@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "29335838721",
+    "project_id": "rentalhouse-f5ecc",
+    "storage_bucket": "rentalhouse-f5ecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29335838721:android:6c8d8fb71a5e172a092000",
+        "android_client_info": {
+          "package_name": "com.example.rentalhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29335838721-tbua8vhiopc60bu9trqbel2p0b1t24r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFCb4go6CS5kkT5xlLouPD2Er-hNAwTd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29335838721-tbua8vhiopc60bu9trqbel2p0b1t24r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

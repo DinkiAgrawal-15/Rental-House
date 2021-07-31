@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RentalHouse</string>
+    <string name="Facility">
+        <item>NONE</item>
+        <item>1 BHK</item>
+        <item>2 BHK</item>
+        <item>Single Room</item>
+
+    </string>
+</resources>
