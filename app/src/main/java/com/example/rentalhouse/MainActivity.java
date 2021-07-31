@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void owner(View view) {
-        startActivity(new Intent(getApplicationContext(),OwnerForm.class));
+        startActivity(new Intent(getApplicationContext(), OwnerFormActivity.class));
     }
     public void tanent(View view) {
-        startActivity(new Intent(getApplicationContext(),tanentform.class));
+        startActivity(new Intent(getApplicationContext(), tanentformActivity.class));
     }
 }

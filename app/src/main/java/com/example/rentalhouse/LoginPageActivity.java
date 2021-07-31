@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -23,7 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginPage extends AppCompatActivity {
+public class LoginPageActivity extends AppCompatActivity {
     EditText memail, mpassword;
     Button mLoginbtn;
     TextView mcreatebtn,mforget_passwrd;
@@ -65,10 +64,10 @@ public class LoginPage extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(LoginPage.this, "Logged in Successfully", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginPageActivity.this, "Logged in Successfully", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
-                            Toast.makeText(LoginPage.this, "Error!!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginPageActivity.this, "Error!!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -80,7 +79,7 @@ public class LoginPage extends AppCompatActivity {
         mcreatebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), signup.class));
+                startActivity(new Intent(getApplicationContext(), signupActivity.class));
             }
         });
         mforget_passwrd.setOnClickListener(new View.OnClickListener() {
@@ -98,12 +97,12 @@ public class LoginPage extends AppCompatActivity {
                    fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                        @Override
                        public void onSuccess(Void unused) {
-                           Toast.makeText(LoginPage.this,"Reset Link sent to your email",Toast.LENGTH_SHORT).show();
+                           Toast.makeText(LoginPageActivity.this,"Reset Link sent to your email",Toast.LENGTH_SHORT).show();
                        }
                    }).addOnFailureListener(new OnFailureListener() {
                        @Override
                        public void onFailure(@NonNull  Exception e) {
-                           Toast.makeText(LoginPage.this,"ERROR!! Reset Link is not sent to your email"+ e.getMessage(),Toast.LENGTH_SHORT).show();
+                           Toast.makeText(LoginPageActivity.this,"ERROR!! Reset Link is not sent to your email"+ e.getMessage(),Toast.LENGTH_SHORT).show();
 
                        }
                    });

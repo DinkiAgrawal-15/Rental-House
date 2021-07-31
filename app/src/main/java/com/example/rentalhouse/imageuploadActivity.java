@@ -1,18 +1,15 @@
 package com.example.rentalhouse;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageSwitcher;
@@ -20,19 +17,17 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class imageupload extends AppCompatActivity {
+public class imageuploadActivity extends AppCompatActivity {
 
     private ImageSwitcher imagesIs;
     EditText housename;
@@ -82,7 +77,7 @@ public class imageupload extends AppCompatActivity {
                     position--;
                     imagesIs.setImageURI(imageUris.get(position));
                 } else {
-                    Toast.makeText(imageupload.this, "No Image", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(imageuploadActivity.this, "No Image", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -94,7 +89,7 @@ public class imageupload extends AppCompatActivity {
                     position++;
                     imagesIs.setImageURI(imageUris.get(position));
                 } else {
-                    Toast.makeText(imageupload.this, "No Image", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(imageuploadActivity.this, "No Image", Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -124,7 +119,7 @@ public class imageupload extends AppCompatActivity {
                         for (int i = 0; i < cout; i++) {
                             Uri imageUri = data.getClipData().getItemAt(i).getUri();
                             imageUris.add(imageUri);
-                            Toast.makeText(imageupload.this,"You Have Selected"+imageUris.size()+" Files",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(imageuploadActivity.this,"You Have Selected"+imageUris.size()+" Files",Toast.LENGTH_SHORT).show();
 
                         }
                         imagesIs.setImageURI(imageUris.get(0));
@@ -150,7 +145,7 @@ public class imageupload extends AppCompatActivity {
             return;
         }else{
             progressDialog.show();
-        Toast.makeText(imageupload.this,"if Takes time ,You can press again",Toast.LENGTH_SHORT).show();
+        Toast.makeText(imageuploadActivity.this,"if Takes time ,You can press again",Toast.LENGTH_SHORT).show();
         for (int j=0;j<imageUris.size();j++){
             Uri perfile=imageUris.get(j);
             StorageReference folder=FirebaseStorage.getInstance().getReference().child("Files"+house_name);
@@ -176,7 +171,7 @@ public class imageupload extends AppCompatActivity {
     }
 
     public void showall(View view) {
-        startActivity(new Intent(getApplicationContext(),imageslider.class));
+       // startActivity(new Intent(getApplicationContext(),imagesliderActivity.class));
 
     }
 }

@@ -13,15 +13,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.rentalhouse.MODEL.ModelOwnerclass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class signup extends AppCompatActivity {
+public class signupActivity extends AppCompatActivity {
     EditText mfullname,memail,mpassword,mconfirmpassword,mphone,mreferal;
     Button mregisterButton;
     TextView mlogintxt;
@@ -66,7 +66,7 @@ public class signup extends AppCompatActivity {
                String cnfrmpassword=mconfirmpassword.getText().toString().trim();
                String  phoneno=mphone.getText().toString().trim();
                String   referal=mreferal.getText().toString().trim();
-               ownerclass ownerclass=new ownerclass(fname,email,password,cnfrmpassword,phoneno,referal);
+               ModelOwnerclass ownerclass=new ModelOwnerclass(fname,email,password,cnfrmpassword,phoneno,referal);
                reference.child(phoneno).setValue(ownerclass);
                if (email.matches(emailpattern)){
 
@@ -111,10 +111,10 @@ public class signup extends AppCompatActivity {
                    @Override
                    public void onComplete(@NonNull Task<AuthResult> task) {
                        if(task.isSuccessful()){
-                           Toast.makeText(signup.this,"User created",Toast.LENGTH_LONG).show();
+                           Toast.makeText(signupActivity.this,"User created",Toast.LENGTH_LONG).show();
                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
                        }else{
-                           Toast.makeText(signup.this,"Error!!!"+ task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                           Toast.makeText(signupActivity.this,"Error!!!"+ task.getException().getMessage(),Toast.LENGTH_LONG).show();
                            progressBar.setVisibility(View.GONE);
 
                        }
@@ -125,7 +125,7 @@ public class signup extends AppCompatActivity {
         mlogintxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),LoginPage.class));
+                startActivity(new Intent(getApplicationContext(), LoginPageActivity.class));
             }
         });
     }

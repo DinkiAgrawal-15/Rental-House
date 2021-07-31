@@ -1,4 +1,4 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.ADAPTER;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rentalhouse.R;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;

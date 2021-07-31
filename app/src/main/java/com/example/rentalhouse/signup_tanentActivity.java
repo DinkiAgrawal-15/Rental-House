@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class signup_tanent extends AppCompatActivity {
+public class signup_tanentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class signup_tanent extends AppCompatActivity {
     }
 
     public void ownerform(View view) {
-        startActivity(new Intent(getApplicationContext(),propertylist.class));
+        startActivity(new Intent(getApplicationContext(), propertylistActivity.class));
 
     }
 }

@@ -1,10 +1,10 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.MODEL;
 
-public class mylistdata {
+public class Modelmylistdata {
     private String House_name;
     private int house_rating;
     private int house_image;
-    public mylistdata(String House_name, int house_rating, int house_image) {
+    public Modelmylistdata(String House_name, int house_rating, int house_image) {
         this.House_name = House_name;
         this.house_rating= house_rating;
         this.house_image= house_image;

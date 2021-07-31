@@ -1,6 +1,6 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.MODEL;
 
-public class ownerclass {
+public class ModelOwnerclass {
     String fname,email,password,cnfrmpassword,phoneno,referal;
 
     public String getName() {
@@ -51,7 +51,7 @@ public class ownerclass {
         this.referal = referal;
     }
 
-    public ownerclass(String name, String email, String password, String confirm_password, String phone_number, String referal) {
+    public ModelOwnerclass(String name, String email, String password, String confirm_password, String phone_number, String referal) {
         this.fname = name;
         this.email = email;
         this.password = password;

@@ -10,17 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentalHouse">
-        <activity android:name=".tanentform" />
-        <activity android:name=".imageslider" />
-        <activity android:name=".signup_tanent" />
-        <activity android:name=".tanentLogin" />
-        <activity android:name=".imageupload" />
-        <activity android:name=".houselist" />
-        <activity android:name=".propertylist" />
-        <activity android:name=".OwnerForm" />
+        <activity android:name=".tanentformActivity" />
+        <activity android:name=".signup_tanentActivity" />
+        <activity android:name=".tanentLoginActivity" />
+        <activity android:name=".imageuploadActivity" />
+        <activity android:name=".houselistActivity" />
+        <activity android:name=".propertylistActivity" />
+        <activity android:name=".OwnerFormActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".signup" />
-        <activity android:name=".LoginPage">
+        <activity android:name=".signupActivity" />
+        <activity android:name=".LoginPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -9,15 +9,15 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.example.rentalhouse.MODEL.ModelTanentclass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class tanentform extends AppCompatActivity {
+public class tanentformActivity extends AppCompatActivity {
     EditText tname, temail, tphone, toccupation, taddress;
     Button btn_register;
     FirebaseDatabase rootnode;
@@ -76,13 +76,13 @@ public class tanentform extends AppCompatActivity {
                     return;
                 }
 
-                tanentclass tanentclass = new tanentclass(name, email, phone, occupation, address);
+                ModelTanentclass ModelTanentclass = new ModelTanentclass(name, email, phone, occupation, address);
                 rootnode = FirebaseDatabase.getInstance();
                 reference = rootnode.getReference("tanent");
-                reference.child(phone).setValue(tanentclass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reference.child(phone).setValue(ModelTanentclass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                                       startActivity(new Intent(getApplicationContext(), propertylist.class));
+                                       startActivity(new Intent(getApplicationContext(), propertylistActivity.class));
 
                     }
                 });

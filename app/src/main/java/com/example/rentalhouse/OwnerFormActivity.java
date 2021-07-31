@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -16,13 +15,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rentalhouse.MODEL.OwnerFormModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class OwnerForm extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
+public class OwnerFormActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
     TextView ownerreg1,ownersnap;
     String[] prop= {"NONE","1BHK","2BHK","Single Room"};
     Spinner tspinner;
@@ -93,7 +93,7 @@ public class OwnerForm extends AppCompatActivity implements AdapterView.OnItemSe
                 reference.child(phone).setValue(ownerFormModel).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull  Task<Void> task) {
-                        startActivity(new Intent(getApplicationContext(), imageupload.class));
+                        startActivity(new Intent(getApplicationContext(), imageuploadActivity.class));
 
                     }
                 });

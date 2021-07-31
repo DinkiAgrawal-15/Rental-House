@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Member;
 
-public class propertylist extends AppCompatActivity {
+public class propertylistActivity extends AppCompatActivity {
     RecyclerView mRecyclerview;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
@@ -36,12 +36,12 @@ public class propertylist extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        FirebaseRecyclerAdapter<Model,mylistAdapter>firebaseRecyclerAdapter=
+     /*   FirebaseRecyclerAdapter<Model,mylistAdapter> firebaseRecyclerAdapter=
                 new FirebaseRecyclerAdapter<Model, mylistAdapter>(
-                        Model.class,
-                        R.layout.list_design,
-                        mylistAdapter.class,
-                        reference
+                       Model.class,
+//                        R.layout.list_design,
+                        mylistAdapter.class
+//                        reference
                 ) {
                     @Override
                     protected void onBindViewHolder(@NonNull @NotNull mylistAdapter holder, int position, @NonNull @NotNull Model model) {
@@ -56,7 +56,7 @@ public class propertylist extends AppCompatActivity {
                         return null;
                     }
                 };
-        mRecyclerview.setAdapter(firebaseRecyclerAdapter);
+        mRecyclerview.setAdapter(firebaseRecyclerAdapter);*/
     }
 }
 

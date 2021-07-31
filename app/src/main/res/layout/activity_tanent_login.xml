@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="30dp"
     android:background="@drawable/background"
-    tools:context=".tanentLogin">
+    tools:context=".tanentLoginActivity">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"

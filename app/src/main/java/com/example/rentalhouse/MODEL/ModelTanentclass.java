@@ -1,9 +1,9 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.MODEL;
 
-public class tanentclass {
+public class ModelTanentclass {
     String name,email,phone,occupation,address;
 
-    public tanentclass(String name, String email, String phone, String occupation, String address) {
+    public ModelTanentclass(String name, String email, String phone, String occupation, String address) {
         this.name = name;
         this.email = email;
         this.phone = phone;

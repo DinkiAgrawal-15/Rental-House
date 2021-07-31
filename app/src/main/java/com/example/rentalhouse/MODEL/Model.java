@@ -1,4 +1,4 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.MODEL;
 
 public class Model {
 

@@ -1,10 +1,11 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.ADAPTER;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.rentalhouse.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 public class SliderAdapterExample extends SliderViewAdapter<SliderAdapterExample.Holder> {

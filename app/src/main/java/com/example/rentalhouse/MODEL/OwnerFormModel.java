@@ -1,4 +1,4 @@
-package com.example.rentalhouse;
+package com.example.rentalhouse.MODEL;
 
 public class OwnerFormModel {
     String whatsapp,phone,address,pincode,city,district,landmark,rent,c1,c2,c3,Family,bach;

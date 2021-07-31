@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class tanentLogin extends AppCompatActivity {
+public class tanentLoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class tanentLogin extends AppCompatActivity {
     }
 
     public void register(View view) {
-        startActivity(new Intent(getApplicationContext(),signup_tanent.class));
+        startActivity(new Intent(getApplicationContext(), signup_tanentActivity.class));
 
     }
 }
